@@ -1,0 +1,18 @@
+/*Home page*/
+.home{
+	background-color: #e8e5c0;
+	font-family: tangerine;
+}
+.navbar{
+	background-color: #fff9f2;
+}
+
+/*Add custom fonts*/
+@font-face{
+	font-family: dancing;
+	src: url("lib/fonts/Dancing_Script/DancingScript-Regular.ttf");
+}
+@font-face{
+	font-family: tangerine;
+	src: url("lib/fonts/Tangerine/Tangerine-Regular.ttf");
+}
