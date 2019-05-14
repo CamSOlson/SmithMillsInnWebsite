@@ -5,19 +5,21 @@
 	background-size: 100%;
 }
 .navbar{
-	/*background-color: #fff9f2;*/
-	background-color: GhostWhite;
+	background-color: SteelBlue;
 	width: 100%;
-	height: 10%;
+	height: 5em;
+	line-height: 2.5em;
+	position: absolute;
 	top: 0;
 	left: 0;
-	position: absolute;
 }
 .navbar>h1{
 	font-family: tangerine;
-	color: #350008;
-	font-size: 250%;
+	color: GhostWhite;
+	font-size: 3em;
 	position: absolute;
+	top: 0;
+	left: 1em;
 }
 /*Main page content*/
 .content{
@@ -46,7 +48,6 @@
 	font-size: 1.5em;
 	margin:0.2;
 }
-
 
 /*Add custom fonts*/
 @font-face{
