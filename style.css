@@ -90,11 +90,11 @@
 	color: GhostWhite;
 }
 
-/*Main page content*/
+/*Major page content*/
 .content{
 	background-color: rgba(248, 248, 255,0.5);
 	position: relative;
-	top: 5em;
+	top: 10em;
 	width: 80%;
 	left:10%;
 	border-radius: 1.5em;
@@ -119,6 +119,15 @@
 	text-indent: 3em;
 	margin:0.2;
 }
+.content>iframe{
+	width: 64vw;
+	height: 36vw;
+	display: block;
+	border: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .title{
 	text-align: center;
 	font-family: tangerine;
@@ -148,7 +157,6 @@
 	top:5em;
 	width: 100%;
 	height: 55vw;
-	margin-bottom: 5em;
 	box-shadow:0em 0em 0.5em 0.5em rgba(0,0,0,0.75);
 }
 
