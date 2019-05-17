@@ -28,11 +28,11 @@
 
 /*Navigation bar*/
 .navbar{
+	position: fixed;
 	background-color: SteelBlue;
 	width: 100%;
 	height: 5em;
 	line-height: 2.5em;
-	position: fixed;
 	top: 0;
 	left: 0;
 	box-shadow:0em 0em 0.25em 0.25em rgba(0,0,0,0.5);
@@ -44,6 +44,35 @@
 	position: absolute;
 	top: 0;
 	left: 1em;
+}
+/*Navigation buttons*/
+.nav_button{
+	position: fixed;
+	width: 10em;
+	height: 3em;
+	top: 1em;
+	border-style: solid;
+	border-width: 0 0.1em 0 0;
+	border-color: GhostWhite;
+}
+.nav_button>button{
+	display: block;
+	background-color: rgba(0, 0, 0, 0);
+	width: 10em;
+	height: 3em;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-family: merriweather;
+	color: GhostWhite;
+	font-size: 1em;
+	border-style: hidden;
+}
+.nav_button>button:hover{
+	background-color: LightSteelBlue;
 }
 
 /*Footer*/
@@ -117,8 +146,8 @@
 	background-size: 100%;
 	position: relative;
 	top:5em;
-	width: 100vw;
-	height: 56.25vw;
+	width: 100%;
+	height: 55vw;
 	margin-bottom: 5em;
 	box-shadow:0em 0em 0.5em 0.5em rgba(0,0,0,0.75);
 }
