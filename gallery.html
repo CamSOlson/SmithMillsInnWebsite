@@ -5,10 +5,43 @@
 			<title>Smith Mills Inn</title>
 			<link rel="stylesheet" type="text/css" href="style.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-			<link rel="icon" href="icon.png">
+			<link rel="icon" href="lib/icon.png">
 		</head>
 		
-		<body class="main">					
+		<body class="main">	
+
+			<!--Outside-->
+			<div class="content">
+				<h2>Exterior</h2>
+
+				<div class="gallery_image_container" id="exterior_images">
+					<img class="gallery_image" src="lib/gallery/outside/outside 0.png" alt="outside 0"></img>
+					<img class="gallery_image" src="lib/gallery/outside/outside 1.png" alt="outside 1"></img>
+					<img class="gallery_image" src="lib/gallery/outside/outside 2.png" alt="outside 2"></img>
+				</div>
+				
+				<button class="gallery_collapse_button">+</button>
+				<script>
+				function myFunction() {
+					var x = document.getElementById("exterior_images");
+					if (x.style.display === "none") {
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+					}
+				}
+				</script>
+			</div>
+			
+			<!--Sitting Area-->
+			<div class="content">
+				<h2>Sitting Area</h2>
+				<div class="gallery_image_container">
+					<img class="gallery_image" src="lib/gallery/rooms/sitting area/sitting area 1.png" alt="sitting area 1"></img>
+					<img class="gallery_image" src="lib/gallery/rooms/sitting area/sitting area 2.png" alt="sitting area 2"></img>
+				</div>
+			</div>
+		
 			<!--Load the footer-->
 			<div id="footer"></div>
 			<script>
