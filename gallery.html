@@ -9,6 +9,21 @@
 		</head>
 		
 		<body class="main">	
+			<!--Visibility function-->
+			<script>
+				function collapse(var divID, var buttonID) {
+					var div = document.getElementById(divID);
+					var button = document.getElementById(buttonID);
+					
+					if (div.style.display === "none") {
+						div.style.display = "block";
+						button.innerHTML = "-";
+					} else {
+						div.style.display = "none";
+						button.innerHTML = "+";
+					}
+				}
+			</script>
 
 			<!--Outside-->
 			<div class="content">
@@ -20,17 +35,8 @@
 					<img class="gallery_image" src="lib/gallery/outside/outside 2.png" alt="outside 2"></img>
 				</div>
 				
-				<button onclick="collapse()" class="gallery_collapse_button">+</button>
-				<script>
-				function collapse() {
-					var x = document.getElementById("exterior_images");
-					if (x.style.display === "none") {
-						x.style.display = "block";
-					} else {
-						x.style.display = "none";
-					}
-				}
-				</script>
+				<button onclick="collapse('exterior_images', 'exterior_button')" class="gallery_collapse_button" id="exterior_button">+</button>
+
 			</div>
 			
 			<!--Sitting Area-->
