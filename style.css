@@ -69,7 +69,9 @@
 	font-family: merriweather;
 	color: GhostWhite;
 	font-size: 1em;
-	border-style: hidden;
+	border: none;
+	outline: none;
+	transition: background .1s ease-in
 }
 .nav_button>button:hover{
 	background-color: LightSteelBlue;
@@ -100,7 +102,7 @@
 	border-radius: 1.5em;
 	padding: 1em;
 	margin-bottom:5em;
-	border-style: double;
+	border-style: solid;
 	border-color: Sienna;
 	border-width: 0.2em;
 	box-shadow:0em 0.25em 0.15em 0.15em rgba(0,0,0,0.3);
@@ -149,6 +151,7 @@
 	border: none;
 	outline: none;
 	border-radius: 0.75em;
+	transition: background .1s ease-in
 }
 .gallery_collapse_button:hover{
 	background-color: LightSteelBlue;
