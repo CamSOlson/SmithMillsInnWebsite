@@ -20,9 +20,9 @@
 					<img class="gallery_image" src="lib/gallery/outside/outside 2.png" alt="outside 2"></img>
 				</div>
 				
-				<button class="gallery_collapse_button">+</button>
+				<button onclick="collapse()" class="gallery_collapse_button">+</button>
 				<script>
-				function myFunction() {
+				function collapse() {
 					var x = document.getElementById("exterior_images");
 					if (x.style.display === "none") {
 						x.style.display = "block";
