@@ -177,8 +177,9 @@
 	position: relative;
 	font-family: merriweather;
 	font-size: 2em;
-	width: 10em;
+	width: calc(50% - 1.5em);
 	height: 2em;
+	left: 1em;
 	display: block;
 	background-color: SteelBlue;
 	color: GhostWhite;
@@ -195,10 +196,10 @@
 	position: relative;
 	font-family: merriweather;
 	font-size: 2em;
-	width: 10em;
+	width: calc(50% - 1.5em);
 	height: 2em;
+	left: calc(50% + 0.5em);
 	top: -2em;
-	left:11em;
 	display: block;
 	background-color: Sienna;
 	color: GhostWhite;
@@ -206,6 +207,7 @@
 	outline: none;
 	border-radius: 0.5em;
 	transition: background .1s ease-in;
+	margin-bottom: -2em;
 }
 .airbnb_link_button:hover{
 	background-color: Peru;
@@ -214,7 +216,7 @@
 .title{
 	text-align: center;
 	font-family: tangerine;
-	font-size: 6em;
+	font-size: 5em;
 	color: Goldenrod;
 	margin: 0.25em;
 }
