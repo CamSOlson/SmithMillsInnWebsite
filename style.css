@@ -165,8 +165,16 @@
 	background-color: LightSteelBlue;
 }
 
+.room_button_container{
+	display: block;
+	margin: auto;
+	width: 50%;
+	height: 3em;
+	margin-bottom: 1em;
+}
+
 .gallery_link_button{
-	position: absolute;
+	position: relative;
 	font-family: merriweather;
 	font-size: 2em;
 	width: 10em;
@@ -174,34 +182,30 @@
 	display: block;
 	background-color: SteelBlue;
 	color: GhostWhite;
-	right: 0.5em;
-	top: 0.5em;
 	border: none;
 	outline: none;
 	border-radius: 0.5em;
 	transition: background .1s ease-in;
-	vertical-align: middle;
 }
 .gallery_link_button:hover{
 	background-color: LightSteelBlue;
 }
 
 .airbnb_link_button{
-	position: absolute;
+	position: relative;
 	font-family: merriweather;
 	font-size: 2em;
 	width: 10em;
 	height: 2em;
+	top: -2em;
+	left:11em;
 	display: block;
 	background-color: Sienna;
 	color: GhostWhite;
-	right: 0.5em;
-	top: 3em;
 	border: none;
 	outline: none;
 	border-radius: 0.5em;
 	transition: background .1s ease-in;
-	vertical-align: middle;
 }
 .airbnb_link_button:hover{
 	background-color: Peru;
