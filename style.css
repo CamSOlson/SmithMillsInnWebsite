@@ -20,10 +20,12 @@
 	font-family: tangerine;
 	background-image: url("lib/wood background.png");
 	background-size: 100%;
-	min-height: 100%;
+	min-height: calc(100% - 5rem);
 	position: relative;
-	padding-bottom: 7em;
+	padding-bottom: 5rem;
+	padding-top: 5rem;
 	margin: 0;
+	text-align: center;
 }
 
 /*Navigation bar*/
@@ -53,23 +55,7 @@
 	top: 0.5em;
 	display: block;
 }
-@media screen and (max-device-width: 370px) {
-	.navbar>h1{
-		font-size: 2em;
-	}
-	.navbar>img{
-		width: 3em;
-		height: 3em;
-	}
-	.navbar{
-		height: 4em;
-	}
-	
-	.mobile_collapse_button{
-		width: 4rem;
-		height: 4rem;
-	}
-}
+
 /*Navigation buttons*/
 .desktop-buttons{
 	position: absolute;
@@ -144,38 +130,18 @@
 	outline: none;
 	transition: background .1s ease-in
 }
-@media screen and (max-device-width: 650px) {
-	.desktop-buttons{
-		display: none;
-	}
-	.mobile-buttons{
-		display: block;
-	}
-}
-@media screen and (max-device-width: 370px) {
-	.mobile_collapse_button{
-		width: 4rem;
-		height: 4rem;
-	}
-	.mobile_nav_menu>div{
-		margin-top: 4rem;
-	}
-	.mobile_nav_menu>div>button{
-		height: 4rem;
-	}
-}
 
 /*Footer*/
 .footer{
 	position: absolute;
-	bottom: -7em;
-	left: 0;
 	width: 100%;
-	height: 7em;
+	height: 5rem;
 	text-align: center;
+	bottom: 0;
 }
 .footer>p{
-	padding-top:3em;
+	position: relative;
+	top: 2rem;
 	font-family: merriweather;
 	color: GhostWhite;
 }
@@ -185,21 +151,15 @@
 	background-color: rgba(248, 248, 255,0.25);
 	position: relative;
 	width: 80%;
-	left:10%;
-	border-radius: 1.5em;
-	margin-bottom: 5rem;
+	border-radius: 1.5rem;
+	margin-top: 5rem;
 	border-style: solid;
 	border-color: Sienna;
-	border-width: 0.2em;
+	border-width: 0.2rem;
 	box-shadow:0em 0.25em 0.15em 0.15em rgba(0,0,0,0.3);
-	text-align: center;
-}
-@media screen and (max-device-width: 650px) {
-	.content{
-		width: 90%;
-		left: 5%;
-		margin-bottom: 2rem;
-	}
+	padding: 1rem;
+	display: inline-block;
+	text-align: left;
 }
 .content>h1{
 	text-align: center;
@@ -208,37 +168,28 @@
 	color: LightSteelBlue;
 	margin: 0.25em;
 }
-@media screen and (max-device-width: 650px) {
-	.content>h1{
-			font-size: 3rem;
-	}
-}
 .content>h2{
 	text-align: center;
 	font-family: merriweather;
-	font-size: 3em;
+	font-size: 3rem;
 	color: Goldenrod;
-	margin: 0.25em;
+	margin: 0.5rem;
+	line-height: 5rem;
 }
 .content>p{
 	text-align: auto;
 	font-family: merriweather;
 	font-size: 1.5rem;
-	text-indent: 3em;
+	text-indent: 3vw;
 	margin: 1rem;
-}
-@media screen and (max-device-width: 650px) {
-	.content>p{
-		font-size: 1rem;
-	}
 }
 .content>ul{
 	text-align: auto;
 	color: LightSteelBlue;
 	font-family: merriweather;
-	font-size: 1.5em;
-	margin:0.2;
-	margin-left: 7em;
+	font-size: 1.5rem;
+	margin: 1rem;
+	margin-left: 5vw;
 }
 .content>iframe{
 	width: 64vw;
@@ -248,88 +199,88 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.gallery_collapse_button{
-	position: absolute;
-	font-family: merriweather;
-	font-size: 3em;
-	width: 1.5em;
-	height: 1.5em;
-	display: block;
-	background-color: SteelBlue;
-	color: GhostWhite;
-	right: 0.5em;
-	top: 0.5em;
-	border: none;
-	outline: none;
-	border-radius: 0.75em;
-	transition: background .1s ease-in
-}
-.gallery_collapse_button:hover{
-	background-color: LightSteelBlue;
-}
-
-.room_button_container{
-	display: block;
-	margin: auto;
-	width: 50%;
-	height: 3em;
-	margin-bottom: 1em;
-}
-
-.gallery_link_button{
-	position: relative;
-	font-family: merriweather;
-	font-size: 2em;
-	width: calc(50% - 1.5em);
-	height: 2em;
-	left: 1em;
-	display: block;
-	background-color: SteelBlue;
-	color: GhostWhite;
-	border: none;
-	outline: none;
-	border-radius: 0.5em;
-	transition: background .1s ease-in;
-}
-.gallery_link_button:hover{
-	background-color: LightSteelBlue;
-}
-
-.airbnb_link_button{
-	position: relative;
-	font-family: merriweather;
-	font-size: 2em;
-	width: calc(50% - 1.5em);
-	height: 2em;
-	left: calc(50% + 0.5em);
-	top: -2em;
-	display: block;
-	background-color: Sienna;
-	color: GhostWhite;
-	border: none;
-	outline: none;
-	border-radius: 0.5em;
-	transition: background .1s ease-in;
-	margin-bottom: -2em;
-}
-.airbnb_link_button:hover{
-	background-color: Peru;
-}
-
+/*Home*/
 .title{
 	text-align: center;
 	font-family: tangerine;
 	font-size: 7rem;
 	color: Goldenrod;
 }
-@media screen and (max-device-width: 650px) {
-	.title{
-		font-size: 3rem;
-	}
-}
 .home_image{
 	width: 70vw;
+}
+/*Gallery*/
+.gallery_collapse_button{
+	position: absolute;
+	font-family: merriweather;
+	font-size: 3rem;
+	width: 6rem;
+	height: 6rem;
+	display: inline-block;
+	background-color: SteelBlue;
+	color: GhostWhite;
+	right: 1rem;
+	top: 1rem;
+	border: none;
+	outline: none;
+	border-radius: 3rem;
+	transition: background .1s ease-in;
+	float: right;
+}
+.gallery_collapse_button:hover{
+	background-color: LightSteelBlue;
+}
+/*Rooms*/
+.room_info{
+	font-weight: bold;
+	color: Goldenrod;
+}
+.room_button_container{
+	display: block;
+	text-align: center;
+}
+.room_button{
+	position: relative;
+	font-family: merriweather;
+	font-size: 1.5rem;
+	height: 2em;
+	display: inline-block;
+	background-color: SteelBlue;
+	color: GhostWhite;
+	border: none;
+	outline: none;
+	border-radius: 0.5em;
+	transition: background .1s ease-in;
+	min-width: 45%;
+}
+.gallery_link_button{
+	background-color: SteelBlue;
+	color: GhostWhite;
+}
+.gallery_link_button:hover{
+	background-color: LightSteelBlue;
+}
+.airbnb_link_button{
+	background-color: Sienna;
+	color: GhostWhite;
+}
+.airbnb_link_button:hover{
+	background-color: Peru;
+}
+/*Maps*/
+.map{
+	position: relative;
+	display: block;
+	margin-top: 5rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	border-style: solid;
+	border-color: Sienna;
+	border-width: 0.2rem;
+	box-shadow:0em 0.25em 0.15em 0.15em rgba(0,0,0,0.3);
+	width: calc(100% - 20rem);
+	height: calc(100vh - 16rem);
+	padding: 0;
 }
 
 /*Images*/
@@ -342,7 +293,7 @@
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 3em;
+	margin-bottom: 3rem;
 	border-style: solid;
 	border-width: 0.5em;
 	border-color: GhostWhite;
@@ -368,37 +319,123 @@
 	border-width: 0.5rem;
 	border-color: GhostWhite;
 }
-@media screen and (max-device-width: 650px) {
-	.bold_white_border{
-		border-width: 0.25rem;
-	}
-}
 /*Focused content*/
 .focus{
 	display: block;
 	background-image: url("lib/flag.png");
 	background-size: 100%;
 	position: relative;
-	top: 5em;
 	width: 100%;
 	box-shadow:0em 0em 0.5em 0.5em rgba(0,0,0,0.75);
     background-size: cover;
 	text-align: center;
 	padding-top: 3vw;
 	padding-bottom: 3vw;
-	margin-bottom: 10rem;
+	margin: 0;
+}
+
+/*Mobile*/
+
+@media screen and (max-device-width: 1024px) {
+	.map{
+		margin-top: 2rem;
+		margin-bottom: 0;
+		margin-left: 2vw;
+		margin-right: 2vw;
+		width: calc(100% - 5vw);
+		height: calc(100vh - 13rem);
+	}
 }
 @media screen and (max-device-width: 650px) {
-	.focus{
-		margin-bottom: 7rem;
+	.bold_white_border{
+		border-width: 0.25rem;
+	}
+	.title{
+		font-size: 3rem;
+	}
+	.room_button{
+		font-size: 1.5rem;
+		width: 80%;
+		min-width: 20%;
+	}
+	.content{
+		width: 80%;
+		margin-top: 2rem;
+	}
+	.content>h1{
+		font-size: 3rem;
+	}
+	.content>h2{
+		font-size: 2rem;
+		line-height: 2rem;
+		text-align: left;
+	}
+	.content>p{
+		font-size: 1rem;
+	}
+	.content>ul{
+		font-size: 1rem;
+	}
+	.desktop-buttons{
+		display: none;
+	}
+	.mobile-buttons{
+		display: block;
+	}
+	.gallery_collapse_button{
+		width: 3rem;
+		height: 3rem;
+		border-radius: 1.5rem;
+		font-size: 2rem;
+	}
+	.gallery_image{
+		width: 80%;
+		margin-bottom: 1rem;
+		border-width: 0.25rem;
+	}
+	.gallery_image_container>h2{
+		font-size: 2em;
+		margin: 1em;
+	}
+	.gallery_image_container{
+		top: 1rem;
+	}
+	.footer>p{
+		font-size: 0.5rem;
+	}
+}
+@media screen and (max-device-width: 370px) {
+	.main{
+		padding-top: 4rem;
+	}
+	.mobile_collapse_button{
+		width: 4rem;
+		height: 4rem;
+	}
+	.mobile_nav_menu>div{
+		margin-top: 4rem;
+	}
+	.mobile_nav_menu>div>button{
+		height: 4rem;
+	}
+	.navbar>h1{
+		font-size: 2em;
+	}
+	.navbar>img{
+		width: 3em;
+		height: 3em;
+	}
+	.navbar{
+		height: 4em;
+	}
+	
+	.mobile_collapse_button{
+		width: 4rem;
+		height: 4rem;
 	}
 }
 
 /*Add custom fonts*/
-@font-face{
-	font-family: dancing;
-	src: url("lib/fonts/DancingScript-Regular.ttf");
-}
 @font-face{
 	font-family: tangerine;
 	src: url("lib/fonts/Tangerine-Regular.ttf");
