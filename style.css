@@ -53,36 +53,116 @@
 	top: 0.5em;
 	display: block;
 }
-/*Navigation buttons*/
-.nav_button{
-	position: fixed;
-	width: 10em;
-	height: 3em;
-	top: 1em;
-	border-style: solid;
-	border-width: 0 0.1em 0 0;
-	border-color: GhostWhite;
+@media screen and (max-device-width: 370px) {
+	.navbar>h1{
+		font-size: 2em;
+	}
+	.navbar>img{
+		width: 3em;
+		height: 3em;
+	}
+	.navbar{
+		height: 4em;
+	}
+	
+	.mobile_collapse_button{
+		width: 4rem;
+		height: 4rem;
+	}
 }
-.nav_button>button{
-	display: block;
-	background-color: rgba(0, 0, 0, 0);
-	width: 10em;
-	height: 3em;
-	margin: 0;
+/*Navigation buttons*/
+.desktop-buttons{
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	right: 3vw;
+	height: 100%;
+}
+.desktop-buttons>button{
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0);
+	width: 10vw;
+	height: 3rem;
+	top: 1rem;
+	margin: 0;
+	position: relative;
 	font-family: merriweather;
 	color: GhostWhite;
-	font-size: 1em;
+	font-size: 1.5vw;
+	border: none;
+	outline: none;
+	transition: background .1s ease-in;
+	border-style: solid;
+	border-width: 0 0.1rem 0 0;
+	border-color: GhostWhite;
+}
+.desktop-buttons>button:hover{
+	background-color: LightSteelBlue;
+}
+.mobile-buttons{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.mobile_nav_menu{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+.mobile_nav_menu>div{
+	margin-top: 5rem;
+	background: LightSteelBlue;
+	box-shadow:0em 0em 0.25em 0.25em rgba(0,0,0,0.5);
+}
+.mobile_nav_menu>div>button{
+	width: 100%;
+	height: 5rem;
+	border: none;
+	outline: none;
+	background: none;
+	font-family: merriweather;
+	font-size: 1.5rem;
+	border-style: solid;
+	border-width: 0 0 0.1rem 0;
+	border-color: GhostWhite;
+	color: GhostWhite;
+}
+.mobile_collapse_button{
+	position: absolute;
+	font-family: merriweather;
+	font-size: 3em;
+	width: 5rem;
+	height: 5rem;
+	display: block;
+	background-color: LightSteelBlue;
+	color: GhostWhite;
+	right: 0;
+	top: 0;
 	border: none;
 	outline: none;
 	transition: background .1s ease-in
 }
-.nav_button>button:hover{
-	background-color: LightSteelBlue;
+@media screen and (max-device-width: 650px) {
+	.desktop-buttons{
+		display: none;
+	}
+	.mobile-buttons{
+		display: block;
+	}
+}
+@media screen and (max-device-width: 370px) {
+	.mobile_collapse_button{
+		width: 4rem;
+		height: 4rem;
+	}
+	.mobile_nav_menu>div{
+		margin-top: 4rem;
+	}
+	.mobile_nav_menu>div>button{
+		height: 4rem;
+	}
 }
 
 /*Footer*/
@@ -104,23 +184,34 @@
 .content{
 	background-color: rgba(248, 248, 255,0.25);
 	position: relative;
-	top: 10em;
 	width: 80%;
 	left:10%;
 	border-radius: 1.5em;
-	padding: 1em;
-	margin-bottom:5em;
+	margin-bottom: 5rem;
 	border-style: solid;
 	border-color: Sienna;
 	border-width: 0.2em;
 	box-shadow:0em 0.25em 0.15em 0.15em rgba(0,0,0,0.3);
+	text-align: center;
+}
+@media screen and (max-device-width: 650px) {
+	.content{
+		width: 90%;
+		left: 5%;
+		margin-bottom: 2rem;
+	}
 }
 .content>h1{
 	text-align: center;
 	font-family: tangerine;
-	font-size: 5em;
+	font-size: 5vw;
 	color: LightSteelBlue;
 	margin: 0.25em;
+}
+@media screen and (max-device-width: 650px) {
+	.content>h1{
+			font-size: 3rem;
+	}
 }
 .content>h2{
 	text-align: center;
@@ -132,9 +223,14 @@
 .content>p{
 	text-align: auto;
 	font-family: merriweather;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	text-indent: 3em;
-	margin:0.2;
+	margin: 1rem;
+}
+@media screen and (max-device-width: 650px) {
+	.content>p{
+		font-size: 1rem;
+	}
 }
 .content>ul{
 	text-align: auto;
@@ -224,9 +320,16 @@
 .title{
 	text-align: center;
 	font-family: tangerine;
-	font-size: 5em;
+	font-size: 7rem;
 	color: Goldenrod;
-	margin: 0.25em;
+}
+@media screen and (max-device-width: 650px) {
+	.title{
+		font-size: 3rem;
+	}
+}
+.home_image{
+	width: 70vw;
 }
 
 /*Images*/
@@ -262,20 +365,33 @@
 /*borders*/
 .bold_white_border{
 	border-style: solid;
-	border-width: 0.5em;
+	border-width: 0.5rem;
 	border-color: GhostWhite;
 }
-
+@media screen and (max-device-width: 650px) {
+	.bold_white_border{
+		border-width: 0.25rem;
+	}
+}
 /*Focused content*/
 .focus{
 	display: block;
 	background-image: url("lib/flag.png");
 	background-size: 100%;
 	position: relative;
-	top:5em;
+	top: 5em;
 	width: 100%;
-	height: 55vw;
 	box-shadow:0em 0em 0.5em 0.5em rgba(0,0,0,0.75);
+    background-size: cover;
+	text-align: center;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	margin-bottom: 10rem;
+}
+@media screen and (max-device-width: 650px) {
+	.focus{
+		margin-bottom: 7rem;
+	}
 }
 
 /*Add custom fonts*/

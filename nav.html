@@ -11,31 +11,58 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta name="author" content="Cameron Olson">
 		</head>
-		<body>
+		<body>				
 			<div class="navbar">
+				<!--Icon and title-->
+				
 				<img src="lib/icon.png" alt="icon"></img>
-			
 				<h1>Smith Mills Inn</h1>
 				
-				<!--Home-->
-				<div class="nav_button" style="right:31em">
+				<!--Normal desktop and large screen buttons-->
+				
+				<div class="desktop-buttons">
 					<button onclick="window.location.href='/'">Home</button>
-				</div>
-				
-				<!--Maps-->
-				<div class="nav_button" style="right:21em">
 					<button onclick="window.location.href='/maps.html'">Maps</button>
-				</div>
-				
-				<!--Rooms-->
-				<div class="nav_button" style="right:11em">
 					<button onclick="window.location.href='/rooms.html'">Rooms</button>
-				</div>
-				
-				<!--Gallery-->
-				<div class="nav_button" style="right:1em">
 					<button onclick="window.location.href='/gallery.html'">Gallery</button>
 				</div>
+				
+				<!--Mobile and small screen drop-down buttons-->
+					
+				<div class="mobile-buttons" id="mobile-buttons">
+					<div id="mobile_nav_menu" class="mobile_nav_menu" style="display:none">
+						<div>
+							<button onclick="window.location.href='/'">Home</button>
+							<button onclick="window.location.href='/maps.html'">Maps</button>
+							<button onclick="window.location.href='/rooms.html'">Rooms</button>
+							<button onclick="window.location.href='/gallery.html'">Gallery</button>
+						</div>
+					</div>
+					
+					<!--Visibility function-->
+					<script>
+						function toggleNavMenu() {
+							var menu = document.getElementById("mobile_nav_menu");
+							var mobileDiv = document.getElementById("mobile_nav_menu");
+							var button = document.getElementById("mobile_collapse_button");
+							
+							if (menu.style.display === "none") {
+								//toggle on
+								menu.style.display = "block";
+								button.innerHTML = "-";
+								mobileDiv.style.backgroundColor = "rgba(0,0,0,0.5)";
+							} else {
+								//toggle off
+								menu.style.display = "none";
+								button.innerHTML = "+";
+								mobileDiv.style.backgroundColor = "none";
+							}
+						}
+					</script>
+				
+					<button onclick="toggleNavMenu()" class="mobile_collapse_button" id="mobile_collapse_button">+</button>
+				</div>
+
 			</div>
 		</body>
 	</html>
